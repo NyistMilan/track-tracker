@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  scheduler:
+    volumes:
+      - ./dbt:/dbt_project
+      - /home/nyistmilan/.dbt:/home/astro/.dbt
+      - ./staging:/usr/local/airflow/staging
+    build:
+      context: .
+      dockerfile: Dockerfile
+  webserver:
+    volumes:
+      - ./dbt:/dbt_project
+      - /home/nyistmilan/.dbt:/home/astro/.dbt
+      - ./staging:/usr/local/airflow/staging
+    build:
+      context: .
+      dockerfile: Dockerfile
