@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_users
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+  - name: dim_tracks
+    columns:
+      - name: track_id
+        tests:
+          - not_null
+      - name: track_name
+        tests:
+          - not_null
+  - name: fact_tracks
+    columns:
+      - name: track_id
+        tests:
+          - not_null
