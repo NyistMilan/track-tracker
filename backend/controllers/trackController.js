@@ -1,7 +1,6 @@
 const User = require("../models/User");
 const spotifyService = require("../services/spotifyService");
 const { refreshAccessToken } = require("./authController");
-const cassandra = require("../config/cassandra");
 
 exports.getUserRecentTracks = async (req, res) => {
   try {
